@@ -36,96 +36,46 @@ Single accent color (used for buttons & links only)
 
 <p className="text-foreground/80 leading-relaxed">
 
-1️⃣ Global styles
+[globals.css] (theme variables)
+ ├── --background         --> page / body background
+ ├── --foreground         --> main text color
+ ├── --surface            --> card, button, input backgrounds
+ ├── --border             --> borders for navbar, cards, inputs
+ ├── --muted              --> "Coming Soon" badges, secondary elements
+ └── --primary / primary-foreground --> buttons, highlights
 
-File: src/app/globals.css
-Variables: --background, --foreground, --border, --muted, --surface, etc.
-Purpose: controls colors, fonts, general spacing across the whole app.
-When to change here:
-Background color of the page (--background)
-Text color (--foreground)
-Default border color (--border)
-Card background (--surface)
-Muted backgrounds (--muted)
-Effect: global — affects all components that use these variables.
+        ↓ used by
 
-2️⃣ Navbar
+[components/ui/Navbar.tsx]
+ ├── border-b / border-border          --> navbar bottom border
+ ├── bg-surface                        --> navbar background
+ ├── rounded-xl / padding              --> navbar shape and spacing
+ └── active link bg / hover classes    --> navigation styling
 
-File: src/components/ui/Navbar.tsx (or src/components/Navbar.tsx)
-Tailwind classes control:
-Background → bg-surface or bg-white
-Borders → border-b, border-border
-Padding → px-6 py-4
-Rounded corners → rounded-xl etc.
-Active link background → bg-foreground or custom class
-When to change here:
-Remove/add navbar border
-Change navbar height or padding
-Change hover or active link styles
-Add shadows or rounded corners
+[components/ui/Card.tsx]
+ ├── bg-surface                        --> card background
+ ├── border / border-border             --> card border
+ ├── rounded-xl / p-6 / hover shadow   --> card shape and hover effect
+ └── tag (TAGS / tagColors)            --> badge colors & label
 
-3️⃣ Cards (Tools / Games)
+[components/ui/Button.tsx & Input.tsx]
+ ├── bg-primary / text-primary-foreground --> buttons colors
+ ├── border / border-border                 --> input borders
+ ├── rounded-lg / padding                   --> shape and size
+ └── hover / active classes                 --> interactivity
 
-File: src/components/ui/Card.tsx
-Tailwind classes control:
-Card shape → rounded-xl
-Card background → bg-surface
-Card border → border border-border
-Hover shadow → hover:shadow-[6px_6px_0_0_rgb(0,0,0)]
-Tag styling → uses TAGS in src/lib/tags.ts
-When to change here:
-Card radius, border thickness/color
-Shadow strength or direction
-Tag colors, size, spacing
+[lib/tags.ts] 
+ └── central list of all card tags with their colors
+     ├── Tools tags: Decision Helper, Productivity, Design
+     ├── Games tags: Logic, Fun, Challenge
+     └── Coming Soon (muted gray)
 
-4️⃣ Buttons / Inputs
+[pages / app/tools/page.tsx & app/games/page.tsx]
+ ├── grid classes (grid-cols, gap)         --> layout of cards
+ ├── max-w / mx-auto / p-8                 --> page spacing
+ └── card components                        --> content & tags
 
-Files:
-src/components/ui/Button.tsx
-src/components/ui/Input.tsx
-Button classes:
-Background → bg-primary
-Text → text-primary-foreground
-Hover shadow → hover:shadow-[4px_4px_0_0_rgb(0,0,0)]
-Rounded corners → rounded-lg
-Input classes:
-Borders → border border-border
-Background → bg-surface
-When to change here:
-Colors (primary, background, text)
-Roundedness / padding / hover effects
-
-5️⃣ Pages (Tools / Games)
-
-Files:
-src/app/tools/page.tsx
-src/app/games/page.tsx
-Purpose: defines grid layout of cards
-Tailwind classes control:
-Grid → grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-Gaps → gap-8
-Section padding → p-8 or max-w-6xl mx-auto
-When to change here:
-Number of columns / responsive layout
-Section spacing
-Page headings / descriptions
-
-6️⃣ Themeing (Light / Dark)
-
-Defined in globals.css under :root and @media (prefers-color-scheme: dark)
-Variables control: background, foreground, surface, border, muted
-When to change here:
-Adjust overall darkness/lightness of dark mode
-Change card hover colors for dark mode
-Update default border colors for all components
-
-🔹 Quick rules of thumb
-What you want to change	Where to look
-Page background	globals.css → --background
-Card color / border / hover	Card.tsx + globals.css
-Navbar border / background	Navbar.tsx + globals.css
-Buttons / Inputs	Button.tsx / Input.tsx
-Tags / badges	tags.ts + Card.tsx
-Grid layout	tools/page.tsx / games/page.tsx
-Dark/light theme colors	globals.css → dark mode variables
-
+[theme / dark mode] (globals.css)
+ ├── @media (prefers-color-scheme: dark)
+ ├── overrides --background, --foreground, --surface, --border, --muted
+ └── automatically applied across all components using these variables
