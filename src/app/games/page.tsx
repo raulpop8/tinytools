@@ -24,7 +24,8 @@ export default function GamesPage() {
         <Card
           title="Tic-Tac-Toe"
           description="Play classic tic-tac-toe against a friend."
-          comingSoon
+          href="/games/tic-tac-toe"
+          tag="Logic"
         />
 
         <Card
