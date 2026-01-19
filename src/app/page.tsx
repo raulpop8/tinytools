@@ -3,11 +3,11 @@ import Card from "@/components/ui/Card";
 export default function Home() {
   return (
     <section className="max-w-6xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-4">
+      <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
         Utility Hub
       </h1>
 
-      <p className="text-gray-600 mb-12 max-w-2xl">
+      <p className="text-foreground/80 leading-relaxed">
         A growing collection of useful tools and small games built to practice
         modern web development and problem-solving.
       </p>
