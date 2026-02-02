@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Utility Hub",
@@ -28,5 +29,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import { Analytics } from "@vercel/analytics/next";
