@@ -35,7 +35,7 @@ const cards = [
 
     {
       title: "What should I eat today?",
-      description: "Generate random meal ideas.",
+      description: "random meal ideas.",
       href: "/tools/",
       tag: "Generator",
       comingSoon: true,
@@ -43,7 +43,7 @@ const cards = [
 
     {
       title: "What should I do today?",
-      description: "Generate random activities.",
+      description: "random activities.",
       href: "/tools/",
       tag: "Generator",
       comingSoon: true,
@@ -51,7 +51,7 @@ const cards = [
 
     {
       title: "What should I wear today?",
-      description: "Generate random outfit ideas.",
+      description: "random outfit ideas.",
       href: "/tools/",
       tag: "Generator",
       comingSoon: true,
@@ -59,7 +59,7 @@ const cards = [
 
     {
       title: "10-minute challenge",
-      description: "Generate random mini-tasks to get things done.",
+      description: "random mini-tasks to get things done.",
       href: "/tools/",
       tag: "Generator",
       comingSoon: true,
@@ -67,7 +67,7 @@ const cards = [
 
     {
       title: "Idle Clicker",
-      description: "fun game to practice clicking skills",
+      description: "practice clicking skills",
       href: "/games/",
       tag: "Fun",
       comingSoon: true,
@@ -75,7 +75,7 @@ const cards = [
 
     {
       title: "Tic-Tac-Toe",
-      description: "play classic tic-tac-toe",
+      description: "classic tic-tac-toe",
       href: "/games/tic-tac-toe",
       tag: "Fun",
       comingSoon: false,

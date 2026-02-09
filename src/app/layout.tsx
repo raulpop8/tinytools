@@ -19,8 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-neutral-900 antialiased">
-        <main className="max-w-7xl mx-auto px-8 py-24">{children}</main>
+      <body className="min-h-screen bg-white text-neutral-900 antialiased flex flex-col">
+        <main className="max-w-7xl mx-auto px-8 py-24 flex-1">{children}</main>
         <Footer />
         <Analytics />
       </body>
