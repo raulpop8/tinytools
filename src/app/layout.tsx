@@ -20,12 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen bg-white text-neutral-900 antialiased">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="max-w-2xl mx-auto px-4 py-20">{children}</main>
         <Footer />
         <Analytics />
       </body>
     </html>
   );
 }
+
+

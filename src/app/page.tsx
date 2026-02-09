@@ -1,32 +1,32 @@
-import Card from "@/components/ui/Card";
+import Link from "next/link";
 
-export default function Home() {
+const tools = [
+  { name: "Random Number", href: "/tools/random-number" },
+  { name: "Password Generator", href: "/tools/password-generator" },
+  { name: "Date Difference", href: "/tools/date-difference" },
+  { name: "Unit Converter", href: "/tools/unit-converter" },
+];
+
+export default function HomePage() {
   return (
-    <section className="max-w-6xl mx-auto p-8">
-      <div className="mb-16 max-w-2xl">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Everyday tools and small games.
-        </h1>
+    <div className="space-y-12">
+      <header className="space-y-4">
+        <h1 className="text-4xl font-semibold tracking-tight">Tiny Tools</h1>
+        <p className="text-neutral-500 text-lg">Small tools. No nonsense.</p>
+      </header>
 
-        <p className="text-foreground/80 leading-relaxed">
-          A growing collection of useful utilities and playful experiments,
-          built to practice modern web development and problem-solving.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card
-          title="Tools"
-          description="Productivity helpers, generators, and everyday utilities."
-          href="/tools"
-        />
-
-        <Card
-          title="Games"
-          description="Small interactive games built for fun and logic practice."
-          href="/games"
-        />
-      </div>
-    </section>
+      <ul className="space-y-3">
+        {tools.map((tool) => (
+          <li key={tool.href}>
+            <Link
+              href={tool.href}
+              className="text-xl underline-offset-4 hover:underline transition-opacity hover:opacity-70"
+            >
+              {tool.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
