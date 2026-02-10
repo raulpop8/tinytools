@@ -1,32 +1,144 @@
 import Card from "@/components/ui/Card";
 
-export default function Home() {
+const cards = [
+    {
+      title: "Password Generator",
+      description: "insanely secure password",
+      href: "/tools/password-generator",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Date Difference",
+      description: "time between two dates",
+      href: "/tools/date-difference",
+      tag: "Calculator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Random Words",
+      description: "random words for fun",
+      href: "/tools/random-words",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Philosophical Question",
+      description: "???",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "What should I eat today?",
+      description: "random meal ideas.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "What should I do today?",
+      description: "random activities.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "What should I wear today?",
+      description: "random outfit ideas.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "10-minute challenge",
+      description: "random mini-tasks to get things done.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Checklist",
+      description: "check your life list",
+      href: "https://neal.fun/life-checklist/",
+      tag: "Fun",
+      comingSoon: true,
+    },
+
+    {
+      title: "Progress",
+      description: "time passing by",
+      href: "https://neal.fun/progress/",
+      tag: "Fun",
+      comingSoon: true,
+    },
+
+    {
+      title: "Life Stats",
+      description: "life stats since you were born",
+      href: "https://neal.fun/life-stats/",
+      tag: "Fun",
+      comingSoon: true,
+    },
+
+    {
+      title: "Idle Clicker",
+      description: "practice clicking skills",
+      href: "/games/",
+      tag: "Fun",
+      comingSoon: true,
+    },
+
+    {
+      title: "Tic-Tac-Toe",
+      description: "classic tic-tac-toe",
+      href: "/games/tic-tac-toe",
+      tag: "Fun",
+      comingSoon: false,
+    },
+
+    {
+      title: "Rock Paper Scissors",
+      description: "play classic rock paper scissors",
+      href: "/games/rock-paper-scissors",
+      tag: "Fun",
+      comingSoon: true,
+    },
+
+    ];
+
+export default function HomePage() {
   return (
-    <section className="max-w-6xl mx-auto p-8">
-      <div className="mb-16 max-w-2xl">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Everyday tools and small games.
-        </h1>
+    <div className="space-y-10">
+      {/* Header */}
+      <header className="text-center space-y-4">
+        <h1 className="text-5xl font-semibold tracking-tight">Tiny Tools</h1>
+        <p className="text-neutral-500 text-lg">useful tools and small games.</p>
+      </header>
 
-        <p className="text-foreground/80 leading-relaxed">
-          A growing collection of useful utilities and playful experiments,
-          built to practice modern web development and problem-solving.
-        </p>
-      </div>
+      {/* Cards */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {cards.map((card) => (
+    <Card
+      key={card.title}
+      title={card.title}
+      description={card.description}
+      href={card.href}
+      tag={card.tag}
+      comingSoon={card.comingSoon} 
+    />
+  ))}
+</section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card
-          title="Tools"
-          description="Productivity helpers, generators, and everyday utilities."
-          href="/tools"
-        />
 
-        <Card
-          title="Games"
-          description="Small interactive games built for fun and logic practice."
-          href="/games"
-        />
-      </div>
-    </section>
+    </div>
   );
 }

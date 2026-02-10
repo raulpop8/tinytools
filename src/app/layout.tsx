@@ -1,11 +1,18 @@
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+
+import { Space_Grotesk } from "next/font/google";
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["400", "500", "600", "700"],
+});
+
 import Footer from "@/components/layout/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  title: "Utility Hub",
-  description: "A collection of useful tools and small games.",
+  title: "Tiny Tools",
+  description: "useful tools and small games",
   icons: {
     icon: "/favicon-v1.ico",
     shortcut: "/favicon-v1.ico",
@@ -20,12 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
+      <body className={`${spaceGrotesk.className} min-h-screen bg-white text-neutral-900 antialiased flex flex-col`}>
+        <main className="max-w-7xl mx-auto px-8 py-15 flex-1">{children}</main>
         <Footer />
         <Analytics />
       </body>
     </html>
   );
 }
+
+
