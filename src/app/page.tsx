@@ -117,7 +117,7 @@ const cards = [
 
 export default function HomePage() {
   return (
-    <div className="space-y-20">
+    <div className="space-y-10">
       {/* Header */}
       <header className="text-center space-y-4">
         <h1 className="text-5xl font-semibold tracking-tight">Tiny Tools</h1>
