@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import Link from "next/link";
 import { Space_Grotesk } from "next/font/google";
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -28,6 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.className} min-h-screen bg-white text-neutral-900 antialiased flex flex-col`}>
+        {/* top-left home link */}
+        <Link href="/" className="fixed top-6 left-6 z-50 text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors duration-200">Tiny Tools</Link>
         <main className="max-w-7xl mx-auto px-8 py-15 flex-1">{children}</main>
         <Footer />
         <Analytics />
