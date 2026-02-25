@@ -105,6 +105,70 @@ const cards = [
       comingSoon: false,
     },
 
+    {
+      title: "Story Prompt Generator",
+      description: "random writing prompts",
+      href: "/tools/story-prompt-generator",
+      tag: "Generator",
+      comingSoon: false,
+    },
+
+    {
+      title: "Random Recipe Generator",
+      description: "random meal ideas",
+      href: "/tools/random-recipe-generator",
+      tag: "Generator",
+      comingSoon: false,
+    },
+
+    {
+      title: "Pomodoro Timer",
+      description: "focus timer with breaks",
+      href: "/tools/pomodoro-timer",
+      tag: "Utility",
+      comingSoon: false,
+    },
+
+    {
+      title: "Calculator",
+      description: "basic arithmetic calculator",
+      href: "/tools/calculator",
+      tag: "Utility",
+      comingSoon: false,
+    },
+
+    {
+      title: "Number Guessing Game",
+      description: "guess the number game",
+      href: "/games/number-guessing-game",
+      tag: "Fun",
+      comingSoon: false,
+    },
+
+    {
+      title: "Coin Flip",
+      description: "flip a virtual coin",
+      href: "/games/coin-flip",
+      tag: "Fun",
+      comingSoon: false,
+    },
+
+    {
+      title: "Dice Roller",
+      description: "roll a virtual die",
+      href: "/games/dice-roller",
+      tag: "Fun",
+      comingSoon: false,
+    },
+
+    {
+      title: "Hangman",
+      description: "classic word guessing game",
+      href: "/games/hangman",
+      tag: "Fun",
+      comingSoon: false,
+    },
+
     ];
 
 export default function HomePage() {
