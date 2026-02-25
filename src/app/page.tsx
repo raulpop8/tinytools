@@ -22,7 +22,7 @@ const cards = [
       description: "play classic rock paper scissors",
       href: "/games/rock-paper-scissors",
       tag: "Fun",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
@@ -30,7 +30,7 @@ const cards = [
       description: "a temporary notepad for quick notes",
       href: "/tools/temporary-notepad",
       tag: "Utility",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
@@ -38,15 +38,15 @@ const cards = [
       description: "insanely secure password",
       href: "/tools/password-generator",
       tag: "Generator",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
       title: "Date Difference",
       description: "time between two dates",
       href: "/tools/date-difference",
-      tag: "Calculator",
-      comingSoon: true,
+      tag: "Utility",
+      comingSoon: false,
     },
 
     {
@@ -54,15 +54,15 @@ const cards = [
       description: "random words for fun",
       href: "/tools/random-words",
       tag: "Generator",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
       title: "Philosophical Questions",
-      description: "???",
+      description: "thought-provoking questions",
       href: "/tools/philosophical-questions",
       tag: "Generator",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
@@ -70,7 +70,7 @@ const cards = [
       description: "random meal ideas.",
       href: "/tools/what-should-i-eat-today",
       tag: "Generator",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
@@ -78,7 +78,7 @@ const cards = [
       description: "random activities.",
       href: "/tools/what-should-i-do-today",
       tag: "Generator",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
@@ -86,7 +86,7 @@ const cards = [
       description: "random outfit ideas.",
       href: "/tools/what-should-i-wear-today",
       tag: "Generator",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
@@ -94,7 +94,7 @@ const cards = [
       description: "random mini-tasks to get things done.",
       href: "/tools/10-minute-challenge",
       tag: "Generator",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     {
@@ -102,7 +102,7 @@ const cards = [
       description: "practice clicking skills",
       href: "/games/idle-clicker",
       tag: "Fun",
-      comingSoon: true,
+      comingSoon: false,
     },
 
     ];
