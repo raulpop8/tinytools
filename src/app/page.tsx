@@ -25,6 +25,86 @@ const cards = [
       comingSoon: true,
     },
 
+    {
+      title: "Temporary Notepad",
+      description: "a temporary notepad for quick notes",
+      href: "/tools/temporary-notepad",
+      tag: "Utility",
+      comingSoon: true,
+    },
+
+    {
+      title: "Password Generator",
+      description: "insanely secure password",
+      href: "/tools/password-generator",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Date Difference",
+      description: "time between two dates",
+      href: "/tools/date-difference",
+      tag: "Calculator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Random Words",
+      description: "random words for fun",
+      href: "/tools/random-words",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Philosophical Question",
+      description: "???",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "What should I eat today?",
+      description: "random meal ideas.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "What should I do today?",
+      description: "random activities.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "What should I wear today?",
+      description: "random outfit ideas.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "10-minute challenge",
+      description: "random mini-tasks to get things done.",
+      href: "/tools/",
+      tag: "Generator",
+      comingSoon: true,
+    },
+
+    {
+      title: "Idle Clicker",
+      description: "practice clicking skills",
+      href: "/games/idle-clicker",
+      tag: "Fun",
+      comingSoon: true,
+    },
+
     ];
 
 export default function HomePage() {
