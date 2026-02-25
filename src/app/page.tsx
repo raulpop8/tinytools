@@ -169,6 +169,14 @@ const cards = [
       comingSoon: false,
     },
 
+    {
+      title: "What to watch today?",
+      description: "random movie/TV recommendations",
+      href: "/tools/what-to-watch-today",
+      tag: "Generator",
+      comingSoon: false,
+    },
+
     ];
 
 export default function HomePage() {
