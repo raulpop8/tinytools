@@ -20,16 +20,7 @@ const defaultSettings: Settings = {
 
 export default function Clock() {
   const [time, setTime] = useState(new Date());
-  const [settings, setSettings] = useState<Settings>(() => {
-    const saved = localStorage.getItem('clock-settings');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        return { ...defaultSettings, ...parsed };
-      } catch {}
-    }
-    return defaultSettings;
-  });
+  const [settings, setSettings] = useState<Settings>(defaultSettings);
   const [showSettings, setShowSettings] = useState(false);
 
   useEffect(() => {
@@ -37,6 +28,18 @@ export default function Clock() {
       setTime(new Date());
     }, 1000);
     return () => clearInterval(interval);
+  }, []);
+
+  // eslint-disable react-hooks/set-state-in-effect
+  useEffect(() => {
+    const saved = localStorage.getItem('clock-settings');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setSettings(prev => ({ ...prev, ...parsed }));
+      } catch {}
+    }
   }, []);
 
   const updateSetting = (key: keyof Settings, value: Settings[keyof Settings]) => {
