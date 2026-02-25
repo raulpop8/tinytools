@@ -58,9 +58,9 @@ const cards = [
     },
 
     {
-      title: "Philosophical Question",
+      title: "Philosophical Questions",
       description: "???",
-      href: "/tools/",
+      href: "/tools/philosophical-questions",
       tag: "Generator",
       comingSoon: true,
     },
@@ -68,7 +68,7 @@ const cards = [
     {
       title: "What should I eat today?",
       description: "random meal ideas.",
-      href: "/tools/",
+      href: "/tools/what-should-i-eat-today",
       tag: "Generator",
       comingSoon: true,
     },
@@ -76,7 +76,7 @@ const cards = [
     {
       title: "What should I do today?",
       description: "random activities.",
-      href: "/tools/",
+      href: "/tools/what-should-i-do-today",
       tag: "Generator",
       comingSoon: true,
     },
@@ -84,7 +84,7 @@ const cards = [
     {
       title: "What should I wear today?",
       description: "random outfit ideas.",
-      href: "/tools/",
+      href: "/tools/what-should-i-wear-today",
       tag: "Generator",
       comingSoon: true,
     },
@@ -92,7 +92,7 @@ const cards = [
     {
       title: "10-minute challenge",
       description: "random mini-tasks to get things done.",
-      href: "/tools/",
+      href: "/tools/10-minute-challenge",
       tag: "Generator",
       comingSoon: true,
     },
