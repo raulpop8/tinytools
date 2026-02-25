@@ -3,6 +3,7 @@ export const TAGS: Record<string, { label: string; colorClass: string }> = {
   "Decision": { label: "Decision", colorClass: "bg-pink-400 text-black" },
   "Generator": { label: "Generator", colorClass: "bg-yellow-400 text-black" },
   "Design": { label: "Design", colorClass: "bg-cyan-400 text-black" },
+  "Utility": { label: "Utility", colorClass: "bg-blue-400 text-black" },
 
   // Games
   "Logic": { label: "Logic", colorClass: "bg-purple-400 text-black" },

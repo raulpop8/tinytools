@@ -10,6 +10,14 @@ const cards = [
     },
 
     {
+      title: "Clock",
+      description: "a digital clock with time and date",
+      href: "/tools/clock",
+      tag: "Utility",
+      comingSoon: false,
+    },
+
+    {
       title: "Rock Paper Scissors",
       description: "play classic rock paper scissors",
       href: "/games/rock-paper-scissors",
