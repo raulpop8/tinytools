@@ -6,8 +6,6 @@ type Weather = {
   temp: number;
   code: number;
   city?: string;
-  min?: number;
-  max?: number;
 };
 
 export default function WeatherTime() {
@@ -63,8 +61,6 @@ export default function WeatherTime() {
             temp: weatherData.current_weather.temperature,
             code: weatherData.current_weather.weathercode,
             city: city,
-            min: weatherData.daily.temperature_2m_min[0],
-            max: weatherData.daily.temperature_2m_max[0],
           });
         } catch (error) {
           console.error("Weather fetch error", error);
@@ -99,18 +95,12 @@ export default function WeatherTime() {
 
       {weather && (
         <>
-          <img src={WeatherIcon} alt="weather" className="w-5 h-5" />
+          <img src={WeatherIcon} alt="weather" className="w-4 h-4" />
           <span>{weather.temp}°C</span>
-
-          {weather.min && weather.max && (
-            <span className="text-neutral-400">
-              ({weather.min}° / {weather.max}°)
-            </span>
-          )}
-  </>
-)}
-      
-      <span>{time}</span>
+          <img src="/clock-color.svg" alt="Clock" className="h-4 w-4 text-neutral-500 hover:text-neutral-800 transition-colors duration-200" />
+          <span>{time}</span>
+        </>
+      )}
     </div>
   );
 }
