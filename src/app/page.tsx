@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Card from "@/components/ui/Card";
+import { TAGS } from "@/lib/tags";
 
 const cards = [
     {
@@ -180,29 +184,74 @@ const cards = [
     ];
 
 export default function HomePage() {
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+
+  const tags = Array.from(new Set(cards.map((c) => c.tag).filter(Boolean)));
+
+  const filteredCards = activeTag
+    ? cards.filter((c) => c.tag === activeTag)
+    : cards;
+
   return (
     <div className="space-y-10">
+
       {/* Header */}
       <header className="text-center space-y-4">
         <h1 className="text-5xl font-semibold tracking-tight">Tiny Tools</h1>
         <p className="text-neutral-500 text-lg">useful tools and small games.</p>
       </header>
 
-      {/* Cards */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-  {cards.map((card) => (
-    <Card
+      {/* Tag Filter */}
+      <div className="flex flex-wrap justify-center gap-2">
+        <button
+          onClick={() => setActiveTag(null)}
+          className={`rounded-full border px-3 py-1 text-sm transition ${
+            activeTag === null
+              ? "bg-neutral-900 text-white border-neutral-900"
+              : "border-neutral-300 hover:bg-neutral-100"
+          }`}
+        >
+          All
+        </button>
+
+        {tags.map((tag) => {
+          const tagInfo = TAGS[tag]; // preia culoarea din TAGS
+          return (
+            <button
+              key={tag}
+              onClick={() => setActiveTag(tag)}
+              className={`rounded-full border px-3 py-1 text-sm transition
+                ${activeTag === tag
+                  ? `${tagInfo?.colorClass} border-transparent`
+                  : `${tagInfo?.colorClass.split(" ")[0]} border-transparent hover:brightness-110`}
+              `}
+            >
+              {tag}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* CARDS GRID */}
+      <div
+  key={activeTag || "all"}
+  className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 transition-all duration-500 ease-in-out"
+>
+  {filteredCards.map((card) => (
+    <div
       key={card.title}
-      title={card.title}
-      description={card.description}
-      href={card.href}
-      tag={card.tag}
-      comingSoon={card.comingSoon} 
-    />
+      className="opacity-0 animate-fadeIn"
+    >
+      <Card
+        title={card.title}
+        description={card.description}
+        href={card.href}
+        tag={card.tag}
+        comingSoon={card.comingSoon}
+      />
+    </div>
   ))}
-</section>
-
-
+</div>
     </div>
   );
 }

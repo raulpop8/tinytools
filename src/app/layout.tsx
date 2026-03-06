@@ -7,8 +7,10 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
+import WeatherTime from "@/components/WeatherTime";
 import Footer from "@/components/layout/Footer";
 import { Analytics } from "@vercel/analytics/react";
+
 
 export const metadata = {
   title: "Tiny Tools",
@@ -17,7 +19,7 @@ export const metadata = {
     icon: "/favicon-v1.ico",
     shortcut: "/favicon-v1.ico",
     apple: "/favicon-v1.ico",
-  }
+  } 
 };
 
 export default function RootLayout({
@@ -28,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.className} min-h-screen bg-white text-neutral-900 antialiased flex flex-col`}>
-        {/* top-left home link */}
+        <WeatherTime />
         <Link href="/" className="fixed top-6 left-6 z-50 text-sm font-medium text-neutral-600 transition-colors duration-200 hover:text-neutral-900 after:block after:h-[2px] after:bg-neutral-900 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">Tiny Tools</Link>
         <main className="max-w-7xl mx-auto px-8 py-15 flex-1">{children}</main>
         <Footer />
